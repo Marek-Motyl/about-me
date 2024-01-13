@@ -2,11 +2,15 @@
 import dayjs from "dayjs";
 import { useMemo } from "react";
 
-const startOfWork = dayjs('2016-02-01');
+export function getStartOfWork() {
+    return dayjs('2016-02-01');
+}
 
 export default function ExperienceTimer() {
     const { years, months, days } = useMemo(() => {
         const now = dayjs();
+        const startOfWork = getStartOfWork();
+
         const yearsDiff = now.diff(startOfWork, 'year');
         const monthsDiff = now.diff(startOfWork, 'month');
         const currentDayOfMonth = now.date()
@@ -16,6 +20,6 @@ export default function ExperienceTimer() {
         }
     }, [])
 
-    // TODO: i18n, unit test
-    return (<span>{`${years} years, ${months} months, and ${days} days`}</span>)
+    // TODO: plurals 
+    return (<span data-testid="experience-timer">{`${years} years, ${months} months, and ${days} days`}</span>)
 }

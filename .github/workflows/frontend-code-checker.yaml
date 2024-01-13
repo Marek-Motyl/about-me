@@ -4,31 +4,36 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
 
+defaults:
+  run:
+    working-directory: ./apps/frontend
+
 jobs:
   code-checker:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      
+
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
           node-version: 18.17.0
-      
+
       - name: Install NPM packages
-        working-directory: ./apps/frontend
         run: |
           npm ci
           npx next telemetry disable
 
-      - name: Run build
-        working-directory: ./apps/frontend
-        run: |
-          npm run build    
-
       - name: Run lint
-        working-directory: ./apps/frontend
         run: |
           npm run lint
-      
+
+      - name: Run test
+        run: |
+          npm run test
+
+      - name: Run build
+        run: |
+          npm run build
