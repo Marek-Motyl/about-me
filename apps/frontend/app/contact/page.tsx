@@ -1,8 +1,9 @@
+import { PageContent } from "@/components/Layout";
 
 export default function Contact() {
   return (
-    <div >
+    <PageContent >
       Contact
-    </div>
+    </PageContent>
   )
 }

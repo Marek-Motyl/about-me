@@ -16,6 +16,9 @@ const config: Config = {
       colors: {
         'base-blue': '#0927eb',
         'base-beige': '#f4f2ee'
+      },
+      maxWidth: {
+        "maxScreen": '1400px'
       }
     },
   },

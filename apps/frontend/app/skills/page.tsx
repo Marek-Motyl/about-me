@@ -1,8 +1,9 @@
+import { PageContent } from "@/components/Layout";
 
 export default function Skills() {
   return (
-    <div >
+    <PageContent >
       Skills
-    </div>
+    </PageContent>
   )
 }

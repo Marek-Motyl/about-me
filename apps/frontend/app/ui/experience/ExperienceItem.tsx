@@ -14,7 +14,7 @@ function ExperienceItem({ item }: Props) {
     return (
         <li className="flex flex-col md:flex-row gap-4 ">
             <div className="flex-1 grow-1 flex-shrink-0 flex-col">
-                <div>
+                <div className="text-2xl font-bold">
                     {item.company}
                 </div>
                 <div>
@@ -33,8 +33,9 @@ function ExperienceItem({ item }: Props) {
                     </span>
                 </div>
             </div>
-            <div className="flex flex-1 grow-2 flex-col gap-4 items-start">
-                <div className="text-xl font-bold">{item.project}</div>
+            <div className="flex flex-1 grow-2 flex-col gap-5 items-start">
+                <div className="text-2xl font-bold">{item.project}</div>
+
                 <p className="text-justify">
                     {item.description.join('. ')}
                 </p>
@@ -48,9 +49,7 @@ function ExperienceItem({ item }: Props) {
                         )}
                     </UnorderedList>
                 </ShowMore>
-
             </div>
-
         </li>
     )
 }
