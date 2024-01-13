@@ -5,6 +5,7 @@ import { memo } from "react";
 import dayjs from "dayjs";
 import ShowMore from "@/components/ShowMore";
 import { UnorderedList, UnorderedListItem } from "@/components/UnorderedList";
+import Tag from "@/components/Tag";
 
 interface Props {
     item: Experience;
@@ -13,24 +14,26 @@ interface Props {
 function ExperienceItem({ item }: Props) {
     return (
         <li className="flex flex-col md:flex-row gap-4 ">
-            <div className="flex-1 grow-1 flex-shrink-0 flex-col">
-                <div className="text-2xl font-bold">
-                    {item.company}
-                </div>
-                <div>
-                    {item.location}
-                </div>
-                <div>
-                    {item.title}
-                </div>
-                <div>
-                    <span>
-                        {dayjs(item.startDate).format('MMMM YYYY')}
-                    </span>
-                    &nbsp;-&nbsp;
-                    <span>
-                        {dayjs(item.endDate).format('MMMM YYYY')}
-                    </span>
+            <div className="flex-1 grow-1 flex-shrink-0">
+                <div className="flex flex-col sticky top-[112px]">
+                    <div className="text-2xl font-bold">
+                        {item.company}
+                    </div>
+                    <div>
+                        {item.location}
+                    </div>
+                    <div>
+                        {item.title}
+                    </div>
+                    <div>
+                        <span>
+                            {dayjs(item.startDate).format('MMMM YYYY')}
+                        </span>
+                        &nbsp;-&nbsp;
+                        <span>
+                            {dayjs(item.endDate).format('MMMM YYYY')}
+                        </span>
+                    </div>
                 </div>
             </div>
             <div className="flex flex-1 grow-2 flex-col gap-5 items-start">
@@ -48,6 +51,12 @@ function ExperienceItem({ item }: Props) {
                             </UnorderedListItem>
                         )}
                     </UnorderedList>
+
+                    <div className="flex flex-wrap gap-2 ">
+                        {item.technologies.map((technology) =>
+                            <Tag key={technology} text={technology} />
+                        )}
+                    </div>
                 </ShowMore>
             </div>
         </li>
