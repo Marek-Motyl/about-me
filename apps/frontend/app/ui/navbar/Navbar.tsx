@@ -18,7 +18,7 @@ export default function Navbar() {
 
     // TODO: move link to components
     return (
-        <nav className="flex flex-row w-full gap-x-8">
+        <nav className="flex flex-row w-full gap-x-8 max-w-maxScreen">
             <div className="h-16 flex grow-3 flex-row items-center justify-between">
                 <Link className="text-2xl font-bold" href={links.home.href}>{links.home.displayName}</Link>
             </div>

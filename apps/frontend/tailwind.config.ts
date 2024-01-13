@@ -14,8 +14,15 @@ const config: Config = {
         3: '3',
       },
       colors: {
-        'base-blue': '#0927eb',
+        'primary': '#0927eb',
+        'secondary': 'rgba(0, 0, 0, 0.75)',
         'base-beige': '#f4f2ee'
+      },
+      maxWidth: {
+        "maxScreen": '1400px',
+        "maxText-xl": '1200px',
+        "maxText-lg": '900px',
+        "maxText": '750px',
       }
     },
   },
