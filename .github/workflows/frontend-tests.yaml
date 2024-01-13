@@ -18,8 +18,14 @@ jobs:
       
       - name: Install NPM packages
         working-directory: ./apps/frontend
-        run: 
+        run: |
           npm ci
+          npx next telemetry disable
+
+      - name: Run build
+        working-directory: ./apps/frontend
+        run: |
+          npm run build    
 
       - name: Run lint
         working-directory: ./apps/frontend
