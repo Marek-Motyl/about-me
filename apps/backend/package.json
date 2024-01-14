@@ -2,11 +2,25 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:offline": "npx rimraf .build & serverless offline"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-lambda": "^3.490.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.131",
+    "eslint": "^8.56.0",
+    "serverless-deployment-bucket": "^1.6.0",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^13.3.2",
+    "serverless-plugin-monorepo": "^0.11.0",
+    "serverless-plugin-typescript": "^2.1.5",
+    "serverless": "^3.38.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
 }
