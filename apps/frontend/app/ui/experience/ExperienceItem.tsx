@@ -15,24 +15,26 @@ function ExperienceItem({ item }: Props) {
     return (
         <li className="flex flex-col md:flex-row gap-4 ">
             <div className="flex-1 grow-1 flex-shrink-0">
-                <div className="flex flex-col sticky top-[112px]">
-                    <div className="text-2xl font-bold">
-                        {item.company}
-                    </div>
-                    <div>
-                        {item.location}
-                    </div>
-                    <div>
-                        {item.title}
-                    </div>
-                    <div>
-                        <span>
-                            {dayjs(item.startDate).format('MMMM YYYY')}
-                        </span>
-                        &nbsp;-&nbsp;
-                        <span>
-                            {dayjs(item.endDate).format('MMMM YYYY')}
-                        </span>
+                <div className="sticky top-[112px]">
+                    <div className="flex flex-col">
+                        <div className="text-2xl font-bold">
+                            {item.company}
+                        </div>
+                        <div>
+                            {item.location}
+                        </div>
+                        <div>
+                            {item.title}
+                        </div>
+                        <div>
+                            <span>
+                                {dayjs(item.startDate).format('MMMM YYYY')}
+                            </span>
+                            &nbsp;-&nbsp;
+                            <span>
+                                {dayjs(item.endDate).format('MMMM YYYY')}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

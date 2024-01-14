@@ -17,12 +17,12 @@ export default function Root({ children, }: React.PropsWithChildren) {
   return (
     <html lang="en">
       <body className={spaceMono.className}>
-        <div className='flex justify-center py-6 px-6 md:px-12 lg:px-16 sticky top-0 bg-base-beige'>
+        <header className="flex justify-center py-6 px-6 md:px-12 lg:px-16 sticky top-0 z-10 bg-base-beige transition-all duration-250">
           <Navbar />
-        </div>
-        <div className="flex justify-center px-6 md:px-12 lg:px-16 py-6 md:py-24">
+        </header>
+        <main className="flex justify-center px-6 md:px-12 lg:px-16 py-6 md:py-24 transition-all duration-250">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   )
