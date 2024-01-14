@@ -15,7 +15,7 @@ export default function Contact() {
 
         <p className="text-lg max-w-maxText-lg mb-4">Feel free to shoot me an email, and let is turn ideas into reality together. Whether it is a game-changing software project or just a friendly chat about the latest tech trends, I&apos;m here for it.</p>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col items-start gap-2">
           <Link href='mailto:motylmarek90@gmail.com'>motylmarek90@gmail.com</Link>
           <Link href='https://github.com/Marek-Motyl' target="_blank">www.github.com/Marek-Motyl</Link>
           <Link href='https://www.linkedin.com/in/marek-motyl/' target="_blank">www.linkedin.com/in/marek-motyl</Link>
