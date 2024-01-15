@@ -1,0 +1,34 @@
+app: about-me
+service: AboutMe
+frameworkVersion: "3"
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'development'}
+  stackName: ${self:service}-${self:provider.stage}
+  apiName: ${self:service}-${self:provider.stage}
+  region: "eu-west-2"
+  memorySize: 128
+  timeout: 30
+  deploymentBucket:
+    name: ${env:DEPLOYMENT_BUCKET_NAME} 
+    serverSideEncryption: AES256
+    blockPublicAccess: true
+  environment:
+    LOG_LEVEL: debug
+
+plugins:
+  - serverless-deployment-bucket
+  - serverless-plugin-typescript
+  - serverless-plugin-monorepo
+  - serverless-offline
+
+functions:
+  trigger:
+    handler: src/handlers/experience/list.handler
+    events:
+      - http:
+          method: GET
+          path: experience
