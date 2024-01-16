@@ -32,7 +32,7 @@
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   },
-  "description": "First, run the development server:",
+  "description": "About me",
   "main": "next.config.js",
   "author": "Marek Motyl",
   "license": "ISC"

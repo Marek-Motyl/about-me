@@ -1,6 +1,6 @@
 "use client"
 
-import { Experience } from "@/data/experience.data";
+import { Experience } from "@/api/experience.data";
 import { memo } from "react";
 import ExperienceItem from "./ExperienceItem";
 

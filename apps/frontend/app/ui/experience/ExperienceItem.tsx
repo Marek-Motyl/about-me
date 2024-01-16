@@ -1,6 +1,6 @@
 "use client"
 
-import { Experience } from "@/data/experience.data";
+import { Experience } from "@/api/experience.data";
 import { memo } from "react";
 import dayjs from "dayjs";
 import ShowMore from "@/components/ShowMore";
