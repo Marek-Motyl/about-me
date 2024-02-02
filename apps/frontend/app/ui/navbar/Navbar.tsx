@@ -5,6 +5,7 @@ import { LinkedinIcon } from "../../../components/Icons";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import GitHubIcon from "@/components/Icons/GitHubIcon";
 
 const links = {
     home: { href: "/", displayName: "Marek Motyl" },
@@ -59,6 +60,7 @@ export default function Navbar() {
                 </menu>
                 <div className="h-16 flex flex-row items-center justify-end gap-x-4">
                     <Link href="https://www.linkedin.com/in/marek-motyl/" target="_blank"><LinkedinIcon /></Link>
+                    <Link href="https://github.com/Marek-Motyl" target="_blank"><GitHubIcon /></Link>
                 </div>
             </div>
         </nav >
