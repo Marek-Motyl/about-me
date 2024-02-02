@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Experience } from "@/api/experience.data";
 import { memo } from "react";
@@ -28,24 +28,22 @@ function ExperienceItem({ item }: Props) {
                         </div>
                         <div>
                             <span>
-                                {dayjs(item.startDate).format('MMMM YYYY')}
+                                {dayjs(item.startDate).format("MMMM YYYY")}
                             </span>
                             &nbsp;-&nbsp;
                             <span>
-                                {dayjs(item.endDate).format('MMMM YYYY')}
+                                {dayjs(item.endDate).format("MMMM YYYY")}
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-1 grow-2 flex-col gap-5 items-start">
-                <div className="text-2xl font-bold">{item.project}</div>
-
-                <p className="text-justify">
-                    {item.description.join('. ')}
+            <div className="flex flex-1 grow-2 flex-col gap-4 items-start">
+                <div className="text-xl md:text-2xl font-bold">{item.project}</div>
+                <p>
+                    {item.description.join(". ")}
                 </p>
-
-                <ShowMore expandText="Show more">
+                <ShowMore expandText="Show more" storageKey={`experience-${item.id}`}>
                     <UnorderedList>
                         {item.responsibilities.map((achievement, index) =>
                             <UnorderedListItem key={index}>
@@ -62,8 +60,8 @@ function ExperienceItem({ item }: Props) {
                 </ShowMore>
             </div>
         </li>
-    )
+    );
 }
 
 
-export default memo(ExperienceItem)
+export default memo(ExperienceItem);

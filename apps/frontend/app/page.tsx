@@ -14,5 +14,5 @@ export default function Home() {
         <p>I have been working with software for <ExperienceTimer /></p>
       </div>
     </PageContent>
-  )
+  );
 }

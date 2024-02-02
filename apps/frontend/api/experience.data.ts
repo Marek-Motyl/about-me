@@ -1,4 +1,5 @@
 export interface Experience {
+    id: string;
     company: string;
     description: string[];
     endDate: string | null;
@@ -12,11 +13,12 @@ export interface Experience {
 }
 
 export const data: Experience[] = [{
+    id: "1",
     title: "Fullstack developer",
     company: "IKEA",
-    location: 'Malmö, Sweden',
+    location: "Malmö, Sweden",
     remote: true,
-    project: 'Kitchen Planner Range Management System',
+    project: "Kitchen Planner Range Management System",
     description: [
         `The Range Management System project is a critical component within the Kitchen Planner landscape`,
         `Developed to maintain and configure the widely-used Kitchen Planner app, this system serves as the backbone for ensuring optimal functionality and support`,
@@ -64,4 +66,4 @@ export const data: Experience[] = [{
         "Styled Components",
         "GitHub Actions",
     ]
-}]
+}];

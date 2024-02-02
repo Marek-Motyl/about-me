@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Experience } from "@/api/experience.data";
 import { memo } from "react";
@@ -13,8 +13,8 @@ function ExperienceList({ data }: Props) {
         <ol className="flex flex-col gap-4 ">
             {data.map(item => <ExperienceItem key={`${item.company}-${item.startDate}`} item={item} />)}
         </ol>
-    )
+    );
 }
 
 
-export default memo(ExperienceList)
+export default memo(ExperienceList);
