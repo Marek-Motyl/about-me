@@ -1,9 +1,10 @@
-"use client"
+"use client";
+import { getPluralString } from "@/utils/plurals";
 import dayjs from "dayjs";
 import { useMemo } from "react";
 
 export function getStartOfWork() {
-    return dayjs('2016-02-01');
+    return dayjs("2016-02-01");
 }
 
 export default function ExperienceTimer() {
@@ -11,15 +12,33 @@ export default function ExperienceTimer() {
         const now = dayjs();
         const startOfWork = getStartOfWork();
 
-        const yearsDiff = now.diff(startOfWork, 'year');
-        const monthsDiff = now.diff(startOfWork, 'month');
-        const currentDayOfMonth = now.date()
+        const yearsDiff = now.diff(startOfWork, "year");
+        const monthsDiff = now.diff(startOfWork, "month");
+        const currentDayOfMonth = now.date();
 
         return {
             years: yearsDiff, months: monthsDiff % 12, days: currentDayOfMonth
-        }
-    }, [])
+        };
+    }, []);
 
-    // TODO: plurals 
-    return (<span data-testid="experience-timer">{`${years} years, ${months} months, and ${days} days`}</span>)
+    const experienceTimeText = [
+        getPluralString(years, {
+            zero: "",
+            one: "{{value}} year",
+            other: "{{value}} years"
+        }),
+        getPluralString(months, {
+            zero: "",
+            one: "{{value}} month",
+            other: "{{value}} months"
+        }),
+        getPluralString(days, {
+            zero: "",
+            one: "and {{value}} day",
+            other: "and {{value}} days"
+        }),
+
+    ].filter(Boolean).join(" ");
+
+    return (<span data-testid="experience-timer">{experienceTimeText}</span>);
 }

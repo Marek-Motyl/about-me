@@ -1,1 +1,1 @@
-export { default as ExperienceTimer } from './ExperienceTimer';
+export { default as ExperienceTimer } from "./ExperienceTimer";

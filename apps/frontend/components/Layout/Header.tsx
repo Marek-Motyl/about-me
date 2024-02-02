@@ -1,4 +1,4 @@
-import clsx from "clsx"
+import clsx from "clsx";
 
 export default function Header({ children, className, ...rest }: React.PropsWithChildren<React.HTMLAttributes<HTMLHeadingElement>>) {
     return (
@@ -10,5 +10,5 @@ export default function Header({ children, className, ...rest }: React.PropsWith
         >
             {children}
         </h1>
-    )
+    );
 }

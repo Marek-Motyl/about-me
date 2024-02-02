@@ -1,14 +1,20 @@
-import MockDate from 'mockdate';
-import { render, screen } from '@testing-library/react'
-import ExperienceTimer from './ExperienceTimer';
+import MockDate from "mockdate";
+import { render, screen } from "@testing-library/react";
+import ExperienceTimer from "./ExperienceTimer";
 
-describe('ExperienceTimer', () => {
-    it('should displays correct value', () => {
-        MockDate.set('2024-02-01');
+describe("ExperienceTimer", () => {
+    it.each`
+    date               | text
+    ${"2024-02-01"}    | ${"8 years and 1 day"}
+    ${"2024-02-02"}    | ${"8 years and 2 days"}
+    ${"2024-03-01"}    | ${"8 years 1 month and 1 day"}
+    ${"2024-04-02"}    | ${"8 years 2 months and 2 days"}
+     `("should displays correct text", ({ date, text }) => {
+        MockDate.set(date);
 
-        render(<ExperienceTimer />)
+        render(<ExperienceTimer />);
 
 
-        expect(screen.getByTestId('experience-timer')).toHaveTextContent('8 years, 0 months, and 1 days')
+        expect(screen.getByTestId("experience-timer")).toHaveTextContent(text);
     });
-})
+});

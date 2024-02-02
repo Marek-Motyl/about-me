@@ -1,4 +1,4 @@
-import clsx from "clsx"
+import clsx from "clsx";
 
 export default function PageContent({ children, className, ...rest }: React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>) {
     return (
@@ -10,5 +10,5 @@ export default function PageContent({ children, className, ...rest }: React.Prop
         >
             {children}
         </div>
-    )
+    );
 }
