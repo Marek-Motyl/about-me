@@ -38,7 +38,6 @@
     ".next/types/**/*.ts",
     "jest.config.js",
     "jest.config.js",
-    "*.ts"
   ],
   "exclude": [
     "node_modules"
