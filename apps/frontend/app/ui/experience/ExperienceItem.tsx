@@ -13,7 +13,7 @@ interface Props {
 
 function ExperienceItem({ item }: Props) {
     return (
-        <li className="flex flex-col md:flex-row gap-4 ">
+        <li className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 grow-1 flex-shrink-0">
                 <div className="sticky top-[112px]">
                     <div className="flex flex-col">
