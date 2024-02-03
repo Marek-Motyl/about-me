@@ -14,7 +14,6 @@ describe("ExperienceTimer", () => {
 
         render(<ExperienceTimer />);
 
-
         expect(screen.getByTestId("experience-timer")).toHaveTextContent(text);
     });
 });
