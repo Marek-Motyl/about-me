@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "prepare": "husky || true",
+    "pre-commit": "npm run pre-commit --workspaces --if-present",
     "build": "npm run build --workspaces --if-present"
   },
   "keywords": [],
@@ -11,5 +13,9 @@
   "workspaces": [
     "apps/frontend",
     "apps/backend"
-  ]
+  ],
+  "devDependencies": {
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1"
+  }
 }
