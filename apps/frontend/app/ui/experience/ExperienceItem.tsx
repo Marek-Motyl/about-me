@@ -17,7 +17,7 @@ function ExperienceItem({ item }: Props) {
             <div className="flex-1 grow-1 flex-shrink-0">
                 <div className="sticky top-[112px]">
                     <div className="flex flex-col">
-                        <div className="text-2xl font-bold">
+                        <div className="text-3xl font-bold">
                             {item.company}
                         </div>
                         <div>
