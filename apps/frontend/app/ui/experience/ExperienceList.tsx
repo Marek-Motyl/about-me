@@ -10,7 +10,7 @@ interface Props {
 
 function ExperienceList({ data }: Props) {
     return (
-        <ol className="flex flex-col gap-4 ">
+        <ol className="flex flex-col gap-8">
             {data.map(item => <ExperienceItem key={`${item.company}-${item.startDate}`} item={item} />)}
         </ol>
     );

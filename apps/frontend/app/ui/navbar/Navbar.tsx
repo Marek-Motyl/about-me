@@ -59,8 +59,8 @@ export default function Navbar() {
                     {menu}
                 </menu>
                 <div className="h-16 flex flex-row items-center justify-end gap-x-4">
-                    <Link href="https://www.linkedin.com/in/marek-motyl/" target="_blank"><LinkedinIcon /></Link>
-                    <Link href="https://github.com/Marek-Motyl" target="_blank"><GitHubIcon /></Link>
+                    <Link href="https://www.linkedin.com/in/marek-motyl/" target="_blank" aria-label="Check out Marek's Linkedin page"><LinkedinIcon  /></Link>
+                    <Link href="https://github.com/Marek-Motyl" target="_blank" aria-label="Check out Marek's Github page"><GitHubIcon  /></Link>
                 </div>
             </div>
         </nav >
