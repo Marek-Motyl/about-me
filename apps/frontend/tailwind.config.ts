@@ -4,7 +4,7 @@ const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}", 
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,15 +14,18 @@ const config: Config = {
         3: "3",
       },
       colors: {
-        "primary": "#0927eb",
+        "primary": "rgb(9, 39, 235)", // #0927eb
         "secondary": "rgba(0, 0, 0, 0.75)",
-        "base-beige": "#f4f2ee"
+        "base-beige": "rgb(244, 242, 238)" // #f4f2ee
       },
       maxWidth: {
         "maxScreen": "1400px",
         "maxText-xl": "1200px",
         "maxText-lg": "900px",
         "maxText": "750px",
+      },
+      boxShadow: {
+        "active-link": "inset 0 -0.175em rgb(244, 242, 238), inset 0 -0.2em rgb(9, 39, 235)",
       }
     },
   },

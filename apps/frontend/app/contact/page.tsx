@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <PageContent >
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         <Header className="mb-12">
           Let&apos;s talk
         </Header>

@@ -1,4 +1,4 @@
-
+// TODO: move to backend
 
 export const softSkills: string[] = [
     "Proactive",
