@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import GitHubIcon from "@/components/Icons/GitHubIcon";
+import NavLink from "./NavLink";
 
 const links = {
     home: { href: "/", displayName: "Marek Motyl" },
@@ -23,11 +24,11 @@ export default function Navbar() {
 
     // TODO: move link to components
     const menu = useMemo(() => [
-        <Link key={links.skills.href} className={clsx({ "active-link": pathname === links.skills.href, })} href={links.skills.href}>{links.skills.displayName}</Link>,
-        <Link key={links.experience.href} className={clsx({ "active-link": pathname === links.experience.href, })} href={links.experience.href}>{links.experience.displayName}</Link>,
-        <Link key={links.contact.href} className={clsx({ "active-link": pathname === links.contact.href, })} href={links.contact.href}>{links.contact.displayName}</Link>,
+        <NavLink key={links.skills.href} active={pathname === links.skills.href} href={links.skills.href} >{links.skills.displayName}</NavLink>,
+        <NavLink key={links.experience.href} active={pathname === links.experience.href} href={links.experience.href}>{links.experience.displayName}</NavLink>,
+        <NavLink key={links.contact.href} active={pathname === links.contact.href} href={links.contact.href}>{links.contact.displayName}</NavLink>,
     ], [pathname]);
-    
+
     return (
         <nav className="flex flex-row w-full gap-x-8 max-w-maxScreen">
             <div className="h-16 flex grow-3 flex-row items-center justify-between">
@@ -59,8 +60,8 @@ export default function Navbar() {
                     {menu}
                 </menu>
                 <div className="h-16 flex flex-row items-center justify-end gap-x-4">
-                    <Link href="https://www.linkedin.com/in/marek-motyl/" target="_blank" aria-label="Check out Marek's Linkedin page"><LinkedinIcon  /></Link>
-                    <Link href="https://github.com/Marek-Motyl" target="_blank" aria-label="Check out Marek's Github page"><GitHubIcon  /></Link>
+                    <Link href="https://www.linkedin.com/in/marek-motyl/" target="_blank" aria-label="Check out Marek's Linkedin page"><LinkedinIcon /></Link>
+                    <Link href="https://github.com/Marek-Motyl" target="_blank" aria-label="Check out Marek's Github page"><GitHubIcon /></Link>
                 </div>
             </div>
         </nav >

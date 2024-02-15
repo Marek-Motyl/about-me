@@ -10,7 +10,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Marek Motyl",
-  description: "About me page",
+  description: "Experienced software developer specializing in React and AWS.\nPassionate about crafting scalable and efficient solutions for web applications.",
 };
 
 export default function Root({ children, }: React.PropsWithChildren) {
